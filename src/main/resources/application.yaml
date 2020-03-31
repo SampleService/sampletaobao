@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: SampleTaobao
+
+mvf4ms:
+  version: 2.5.1
+  dependencies:
+    - name: dependency1
+      dependence:
+        - id: pay
+          serviceName: SampleAliPay
+          patternUrl: /pay
+          versions:
+            - 2.3.1
+        - id: delivery
+          function: delivery
+          slas:
+            - 2
+            - 3
+            - 4
+
+server:
+  port: 8080
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://{REGISTRY_IP}:{REGISTRY_PORT}/eureka
