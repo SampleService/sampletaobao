@@ -3,7 +3,7 @@ spring:
     name: SampleTaobao
 
 mvf4ms:
-  version: 2.5.1
+  version: 3.1.0
   dependencies:
     - name: dependency1
       dependence:
@@ -11,13 +11,12 @@ mvf4ms:
           serviceName: SampleAliPay
           patternUrl: /pay
           versions:
-            - 2.3.1
+            - 3.3.1
         - id: delivery
-          function: delivery
-          slas:
-            - 1
-            - 2
-            - 3
+          serviceName: SampleSF
+          patternUrl: /delivery
+          versions:
+            - 4.1.1
 
 server:
   port: 8080
