@@ -15,9 +15,9 @@ mvf4ms:
         - id: delivery
           function: delivery
           slas:
+            - 1
             - 2
             - 3
-            - 4
 
 server:
   port: 8080
